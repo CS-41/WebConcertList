@@ -8,3 +8,5 @@
 .project
 
 */META-INF/*
+/target/
+target/m2e-wtp/web-resources/META-INF/maven/webconcertlist/webconcertlist/pom.properties
