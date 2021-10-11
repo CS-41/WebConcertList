@@ -6,7 +6,7 @@ Oct 5, 2021
 package model;
 
 import java.time.LocalDate;
-
+//Comment, comment,comment.
 public class Event {
 
 	private String eventName;
