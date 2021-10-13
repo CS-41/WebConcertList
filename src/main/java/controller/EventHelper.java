@@ -4,7 +4,6 @@
  * Oct 10, 2021
  */
 package controller;
-import java.time.LocalDate;
 import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
