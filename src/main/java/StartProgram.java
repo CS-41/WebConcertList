@@ -24,13 +24,13 @@ public class StartProgram {
 		String eventName = in.nextLine();
 		
 		System.out.print("Enter the event date (ex. 2021-Oct-10): ");
-		String userDate = in.nextLine();
+		String eventLocation = in.nextLine();
 		
-		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MMM-dd");
-		formatter = formatter.withLocale(Locale.US);
-		LocalDate eventDate = LocalDate.parse(userDate, formatter);
+		//DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MMM-dd");
+		//formatter = formatter.withLocale(Locale.US);
+		//LocalDate eventDate = LocalDate.parse(userDate, formatter);
 		
-		Event toAdd = new Event(eventName, eventDate);
+		Event toAdd = new Event(eventName, eventLocation);
 		eh.insertEvent(toAdd);
 	}
 	
@@ -39,13 +39,13 @@ public class StartProgram {
 		System.out.print("Enter the event to delete: ");
 		String eventName = in.nextLine();
 		System.out.print("Enter the event date to delete (ex. 2021-Oct-10): ");
-		String userDate = in.nextLine();
+		String eventLocation = in.nextLine();
 		
-		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MMM-dd");
-		formatter = formatter.withLocale(Locale.US);
-		LocalDate eventDate = LocalDate.parse(userDate, formatter);
+		//DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MMM-dd");
+		//formatter = formatter.withLocale(Locale.US);
+		//LocalDate eventDate = LocalDate.parse(userDate, formatter);
 		
-		Event toDelete = new Event(eventName, eventDate);
+		Event toDelete = new Event(eventName, eventLocation);
 		eh.deleteEvent(toDelete);
 	}
 
@@ -65,13 +65,13 @@ public class StartProgram {
 			
 		} else {
 			System.out.print("Enter the event date (ex. 2021-OCT-10): ");
-			String userDate = in.nextLine();
+			String eventLocation = in.nextLine();
 			
-			DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MMM-dd");
-			formatter = formatter.withLocale(Locale.US);
-			LocalDate eventDate = LocalDate.parse(userDate, formatter);
+			//DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MMM-dd");
+			//formatter = formatter.withLocale(Locale.US);
+			//LocalDate eventDate = LocalDate.parse(userDate, formatter);
 			
-			foundEvents = eh.searchForEventByDate(eventDate);
+			foundEvents = eh.searchForEventByLocation(eventLocation);
 		}
 
 		if (!foundEvents.isEmpty()) {
@@ -96,13 +96,13 @@ public class StartProgram {
 				
 			} else if (update == 2) {
 				System.out.print("New Date: ");
-				String newUserEventDate = in.nextLine();
+				String newEventLocation = in.nextLine();
 				
-				DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MMM-dd");
-				formatter = formatter.withLocale(Locale.US);
-				LocalDate newEventDate = LocalDate.parse(newUserEventDate, formatter);			
+				//DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MMM-dd");
+				//formatter = formatter.withLocale(Locale.US);
+				//LocalDate newEventDate = LocalDate.parse(newUserEventDate, formatter);			
 				
-				toEdit.setEventDate(newEventDate);
+				toEdit.setEventLocation(newEventLocation);
 			}
 
 			eh.updateEvent(toEdit);
