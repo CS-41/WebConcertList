@@ -5,10 +5,10 @@
 		<class>model.Event</class>
 		<properties>
 			<property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
-			<property name="javax.persistence.jdbc.url" value="jdbc:mysql://cis175project.c886sindthef.us-east-1.rds.amazonaws.com/allevents"/>
-			<property name="javax.persistence.jdbc.user" value="admin"/>
+			<property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/WebConcertList"/>
+			<property name="javax.persistence.jdbc.user" value="root"/>
+			<property name="javax.persistence.jdbc.password" value="s5s5g39502438821!"/>
 			<property name="eclipselink.ddl-generation" value="drop-and-create-tables"/>
-			<property name="javax.persistence.jdbc.password" value="dmaccProject123"/>
 		</properties>
 	</persistence-unit>
 </persistence>

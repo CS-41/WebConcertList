@@ -34,10 +34,10 @@ public class EventHelper {
 	public void deleteEvent(Event toDelete) {
 		EntityManager em = emfactory.createEntityManager();
 		em.getTransaction().begin();
-		TypedQuery<Event>typedQuery=em.createQuery("select e from Event e where e.eventName =:selectedEventName and e.eventDate =:selectedEventDate", Event.class);
+		TypedQuery<Event>typedQuery=em.createQuery("select e from Event e where e.eventName =:selectedEventName and e.eventLocation =:selectedeventLocation", Event.class);
 		
 		typedQuery.setParameter("selectedEventName", toDelete.getEventName());
-		typedQuery.setParameter("selectedEventDate", toDelete.getEventDate());
+		typedQuery.setParameter("selectedeventLocation", toDelete.getEventLocation());
 				
 		typedQuery.setMaxResults(1);
 		
@@ -59,11 +59,11 @@ public class EventHelper {
 	}
 		
 	
-	public List<Event> searchForEventByDate(LocalDate eventDate){
+	public List<Event> searchForEventByLocation(String eventLocation){
 		EntityManager em = emfactory.createEntityManager();
 		em.getTransaction().begin();
-		TypedQuery<Event>typedQuery = em.createQuery("select e from Event e where e.eventDate =:selectedEventDate", Event.class);
-		typedQuery.setParameter("selectedEventDate", eventDate);
+		TypedQuery<Event>typedQuery = em.createQuery("select e from Event e where e.eventLocation =:selectedeventLocation", Event.class);
+		typedQuery.setParameter("selectedeventLocation", eventLocation);
 		
 		List<Event>foundEvents = typedQuery.getResultList();
 		em.close();
@@ -73,7 +73,7 @@ public class EventHelper {
 	public List<Event> searchForEventByEvent(String eventName){
 		EntityManager em = emfactory.createEntityManager();
 		em.getTransaction().begin();
-		TypedQuery<Event>typedQuery = em.createQuery("select e from Event e where e.eventName =:setParameter", Event.class);
+		TypedQuery<Event>typedQuery = em.createQuery("select e from Event e where e.eventName =:selectedEventName", Event.class); 
 		typedQuery.setParameter("selectedEventName", eventName);
 		
 		List<Event>foundEvents = typedQuery.getResultList();

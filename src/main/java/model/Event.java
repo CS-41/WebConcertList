@@ -24,8 +24,8 @@ public class Event {
 	@Column(name = "EVENTNAME")
 	private String eventName;
 	//Changed for clarity and updated the getters/setters/toString
-	@Column(name = "EVENTDATE")
-	private LocalDate eventDate;
+	@Column(name = "eventLocation")
+	private String eventLocation;
 	
 	//Based on her notes, I think the cost per ticket can go into the "TicketSales"
 	//class - which will combine this class with the "Customer Class".
@@ -36,19 +36,19 @@ public class Event {
 		super();
 	}
 
-	public Event(int id, String eventName, LocalDate eventDate) 
+	public Event(int id, String eventName, String eventLocation) 
 	{
 		super();
 		this.id = id;
 		this.eventName = eventName;
-		this.eventDate = eventDate;
+		this.eventLocation = eventLocation;
 	}
 	
-	public Event(String eventName, LocalDate eventDate) 
+	public Event(String eventName, String eventLocation) 
 	{
 		super();
 		this.eventName = eventName;
-		this.eventDate = eventDate;
+		this.eventLocation = eventLocation;
 	}
 	
 	/**
@@ -80,26 +80,26 @@ public class Event {
 	}
 
 	/**
-	 * @return the eventDate
+	 * @return the eventLocation
 	 */
-	public LocalDate getEventDate() {
-		return eventDate;
+	public String getEventLocation() {
+		return eventLocation;
 	}
 
 	/**
-	 * @param eventDate the eventDate to set
+	 * @param eventLocation the eventLocation to set
 	 */
-	public void setEventDate(LocalDate eventDate) {
-		this.eventDate = eventDate;
+	public void setEventLocation(String eventLocation) {
+		this.eventLocation = eventLocation;
 	}
 
 	public String returnEventDetails() {
-		return this.eventName + ": " + this.eventDate;
+		return this.eventName + ": " + this.eventLocation;
 	}
 		
 	@Override
 	public String toString() {
-		return "Event [id=" + id + ", eventName=" + eventName + ", eventDate=" + eventDate + "]";
+		return "Event [id=" + id + ", eventName=" + eventName + ", eventLocation=" + eventLocation + "]";
 	}
 
 }
