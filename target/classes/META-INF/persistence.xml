@@ -3,9 +3,6 @@
 	<persistence-unit name="WebConcertList" transaction-type="RESOURCE_LOCAL">
 		<provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
 		<class>model.Event</class>
-		<class>model.Customer</class>
-		<class>model.TicketSales</class>
-		<class>controller.LocalDateAttributeConverter</class>
 		<properties>
 			<property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
 			<property name="javax.persistence.jdbc.url" value="jdbc:mysql://cis175project.c886sindthef.us-east-1.rds.amazonaws.com/allevents"/>
