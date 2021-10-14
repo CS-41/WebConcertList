@@ -13,8 +13,9 @@
 <c:forEach items="${requestScope.allItems}" var="currentitem">
 <tr>
 	<td><input type="radio" name="id" value="${currentitem.id}"></td>
-	<td>${currentitem.eventName}</td>
-	<td>${currentitem.eventLocation}</td>
+	<td>| ${currentitem.eventName}</td>
+	<td> - </td>
+	<td>${currentitem.eventLocation} |</td>
 </tr>
 </c:forEach>
 </table>
@@ -24,3 +25,6 @@
 </form>
 </body>
 </html>
+
+
+<!-- Change this file name to something that makes sense -->
