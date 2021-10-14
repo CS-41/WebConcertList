@@ -12,14 +12,14 @@ import model.Event;
 /**
  * Servlet implementation class AddItemServlet
  */
-@WebServlet("/addItemServlet")
-public class AddItemServlet extends HttpServlet {
+@WebServlet("/addEventServlet")
+public class AddEventServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public AddItemServlet() {
+    public AddEventServlet() {
         super();
         // TODO Auto-generated constructor stub
     }

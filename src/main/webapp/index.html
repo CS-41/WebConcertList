@@ -2,15 +2,17 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Concert List Home Page</title>
+<title>Events!</title>
 </head>
 <body>
-<form action = "addItemServlet" method="post">
+<form action = "addEventServlet" method="post">
 Event: <input type="text" name="event">
 Event Location: <input type="text" name="location">
-<input type="submit" value="Add Concert">
+<input type="submit" value="Add Event">
 </form>
 <br />
-<a href="viewAllItemsServlet">View the complete list of concerts</a>
+	<a href="viewAllItemsServlet">View the complete list of concerts</a><br />
+	<a href = "viewAllListsServlet">View all ticket sales</a><br />
+	<a href = "addItemsForListServlet">Create a ticket sale</a><br />
 </body>
 </html>
