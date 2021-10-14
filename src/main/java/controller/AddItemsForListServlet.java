@@ -7,19 +7,17 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import model.Event;
-
 /**
- * Servlet implementation class EditItemServlet
+ * Servlet implementation class AddItemsForListServlet
  */
-@WebServlet("/editItemServlet")
-public class EditItemServlet extends HttpServlet {
+@WebServlet("/addItemsForListServlet")
+public class AddItemsForListServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public EditItemServlet() {
+    public AddItemsForListServlet() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -29,7 +27,15 @@ public class EditItemServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
+		
+		EventHelper dao = new EventHelper();
+		request.setAttribute("allEvents", dao.showAllEvents());
+		
+		if(dao.showAllEvents().isEmpty()) {
+			request.setAttribute("allEvents", " ");
+		}
+		
+		getServletContext().getRequestDispatcher("/new-list.jsp").forward(request, response);
 	}
 
 	/**
@@ -38,20 +44,6 @@ public class EditItemServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		doGet(request, response);
-		
-		EventHelper dao = new EventHelper();
-		
-		String event = request.getParameter("event");
-		String eventLocation = request.getParameter("location");
-		Integer tempId = Integer.parseInt(request.getParameter("id"));
-		
-		Event itemToUpdate = dao.searchForEventById(tempId);
-		itemToUpdate.setEventName(event);
-		itemToUpdate.setEventLocation(eventLocation);
-		
-		dao.updateEvent(itemToUpdate);
-		
-		getServletContext().getRequestDispatcher("/viewAllItemsServlet").forward(request, response);
 	}
 
 }

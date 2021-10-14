@@ -8,7 +8,7 @@
 <title>Edit an Event</title>
 </head>
 <body>
-<form action="editItemServlet" method="post">
+<form action="editEventServlet" method="post">
 Event: <input type="text" name="event" value="${itemToEdit.eventName}">
 Event Location: <input type="text" name="location" value="${itemToEdit.eventLocation}">
 <input type="hidden" name="id" value="${itemToEdit.id}">

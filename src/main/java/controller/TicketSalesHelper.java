@@ -24,7 +24,7 @@ public class TicketSalesHelper {
 		em.close();
 	}
 	
-	public List<TicketSales> getSales() {
+	public List<TicketSales>getSales() {
 		EntityManager em = emfactory.createEntityManager();
 		List<TicketSales> allSales = em.createQuery("SELECT s FROM TicketSales s").getResultList();
 		return allSales;

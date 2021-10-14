@@ -27,7 +27,7 @@ public class TicketSales {
 	@ManyToOne(cascade=CascadeType.PERSIST)
 	private Customer customer;
 	
-	@OneToMany(cascade = CascadeType.PERSIST, fetch=FetchType.EAGER)
+	@OneToMany(cascade = CascadeType.MERGE, fetch=FetchType.EAGER)
 	private List<Event>listOfEvents;
 	
 	public TicketSales() {
