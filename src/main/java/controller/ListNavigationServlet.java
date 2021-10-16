@@ -82,7 +82,7 @@ public class ListNavigationServlet extends HttpServlet {
 				getServletContext().getRequestDispatcher("/viewAllListsServlet").forward(request, response);
 			}
 		} else if (act.equals("add")) {
-			getServletContext().getRequestDispatcher("/new-list.jsp").forward(request, response);
+			getServletContext().getRequestDispatcher("/addItemsForListServlet").forward(request, response);
 		}
 		
 	}

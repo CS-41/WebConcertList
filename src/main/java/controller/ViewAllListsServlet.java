@@ -37,8 +37,8 @@ public class ViewAllListsServlet extends HttpServlet {
 			request.setAttribute("allSales",  " ");
 		}
 		
-		getServletContext().getRequestDispatcher("/shopping-list-by-user.jsp").forward(request, response);
-
+		getServletContext().getRequestDispatcher("/event-list-by-user.jsp").forward(request, response); // need to change when changing file name
+		// change this to new name of file from shopping-list-by-user to event-list-by-user // ********** Changed this
 	}
 
 
