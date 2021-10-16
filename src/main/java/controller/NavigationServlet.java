@@ -64,7 +64,7 @@ public class NavigationServlet extends HttpServlet {
 				Integer tempId = Integer.parseInt(request.getParameter("id"));
 				Event itemToEdit = dao.searchForEventById(tempId);
 				request.setAttribute("itemToEdit", itemToEdit);
-				path = "/edit-item.jsp";
+				path = "/edit-item.jsp"; // changed from edit-item
 			}
 			catch(NumberFormatException e)
 			{

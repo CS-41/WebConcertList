@@ -30,7 +30,7 @@ public class ViewAllItemsServlet extends HttpServlet {
 		EventHelper dao = new EventHelper();
 		request.setAttribute("allItems", dao.showAllEvents());
 		
-		String path = "/event-list.jsp"; // change this to new name of file from shopping-list to event-list // ********** Changed this
+		String path = "/event-list.jsp"; 
 		
 		if(dao.showAllEvents().isEmpty())
 		{

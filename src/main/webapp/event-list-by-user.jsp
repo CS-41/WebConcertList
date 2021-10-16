@@ -5,9 +5,16 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Events By Customer (Or Something)</title>
+<title>Events By Customer</title>
+<style>
+body {background-color: LightBlue;}
+.h1{
+	font-family: Arial, Helvetica, sans-serif;
+}
+</style>
 </head>
 <body>
+	<h1 class="h1">Events by Customer</h1>
 	<form method = "post" action = "listNavigationServlet">
 	<table>
 	<c:forEach items = "${requestScope.allSales}" var="currentlist">

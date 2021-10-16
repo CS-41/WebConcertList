@@ -6,8 +6,15 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>New Ticket Sales!</title>
+<style>
+body {background-color: LightBlue;}
+.h1{
+	font-family: Arial, Helvetica, sans-serif;
+}
+</style>
 </head>
 <body>
+	<h1 class="h1">Create a New Ticket Sale</h1>
 	<form action = "createNewListServlet" method="post">
 	Order Date: <input type="text" name = "month" placeholder="mm" size="4">
 	<input type="text" name = "day" placeholder="dd" size="4">

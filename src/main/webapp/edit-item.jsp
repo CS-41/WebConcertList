@@ -6,8 +6,15 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Edit an Event</title>
+<style>
+body {background-color: LightBlue;}
+.h1{
+	font-family: Arial, Helvetica, sans-serif;
+}
+</style>
 </head>
 <body>
+<h1 class="h1">Edit Event Item</h1>
 <form action="editEventServlet" method="post">
 Event: <input type="text" name="event" value="${itemToEdit.eventName}">
 Event Location: <input type="text" name="location" value="${itemToEdit.eventLocation}">

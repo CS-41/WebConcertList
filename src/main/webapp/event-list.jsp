@@ -6,8 +6,15 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Concert List</title>
+<style>
+body {background-color: LightBlue;}
+.h1{
+	font-family: Arial, Helvetica, sans-serif;
+}
+</style>
 </head>
 <body>
+<h1 class="h1">List of Events</h1>
 <form method="post" action="navigationServlet">
 <table>
 <c:forEach items="${requestScope.allItems}" var="currentitem">
@@ -25,6 +32,3 @@
 </form>
 </body>
 </html>
-
-
-<!-- Change this file name to something that makes sense -->

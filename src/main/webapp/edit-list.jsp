@@ -6,8 +6,15 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Edit Sale!</title>
+<style>
+body {background-color: LightBlue;}
+.h1{
+	font-family: Arial, Helvetica, sans-serif;
+}
+</style>
 </head>
 <body>
+	<h1 class="h1">Edit Event by Customer</h1>
 	<form action = "editListDetailsServlet" method = "post">
 	<input type = "hidden" name = "id" value = "${saleToEdit.id}">
 	Order date: <input type ="text" name = "month" placeholder="mm" size="4" value= "${month}"> <input 
